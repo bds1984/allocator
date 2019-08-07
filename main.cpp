@@ -20,7 +20,7 @@ template<typename T> struct my_allocator {
 
 	template<typename U> struct rebind { using other = my_allocator<U>; };
 
-	void deallocate(pointer p, [[maybe_unused]] size_t n) { std::free(p); }
+	void deallocate(pointer p, size_t n={}) { std::free(p);p=p+n; }
 
 	template<typename U, typename ...Args>void construct(U* p, Args&& ...args) {new(p) U(std::forward<Args>(args)...); }
 
@@ -46,7 +46,7 @@ template<typename T,int N> struct my_map_allocator{
 
 	template<typename U> struct rebind { using other = my_allocator<U>; };
 
-	void deallocate(pointer p, [[maybe_unused]] size_t n) { std::free(p); }
+	void deallocate(pointer p, size_t n={}) { std::free(p);p=p+n; }
 
 	template<typename U, typename ...Args>void construct(U* p, Args&& ...args) {new(p) U(std::forward<Args>(args)...); }
 
@@ -170,3 +170,4 @@ std::cout<<"std::map with my allocator \n";
  
     return 0;
 }
+
