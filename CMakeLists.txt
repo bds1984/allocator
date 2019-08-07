@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.2)
 add_executable(allocator allocator.cpp)
 
 
-set_target_properties(allocator.cpp PROPERTIES
+set_target_properties(allocator PROPERTIES
     CXX_STANDARD 14
     CXX_STANDARD_REQUIRED ON
 )
@@ -23,7 +23,7 @@ endif()
 
 
 
-install(TARGETS allocator.cpp RUNTIME DESTINATION bin)
+install(TARGETS allocator RUNTIME DESTINATION bin)
 
 set(CPACK_GENERATOR DEB)
 
