@@ -20,4 +20,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T allocator-0.0.1-Linux.deb -ubds1984:$BIN_TRAY_API "https://api.bintray.com/content/bds1984/allocator/allocator/1/allocator-0.0.1-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T allocator-0.0.1-Linux.deb -ubds1984:$BIN_TRAY_API "https://api.bintray.com/content/bds1984/allocator/allocator/allocator-0.0.1-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
