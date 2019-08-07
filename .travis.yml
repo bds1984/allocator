@@ -21,4 +21,4 @@ deploy:
   provider: script
   skip_cleanup: true
   script:
-  - curl -T ip_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ubds1984:d09c67e0bb9aca358e93c14f7cb3c56833f453f2 "https://api.bintray.com/content/bds1984/allocator/dz3allocator/$TRAVIS_BUILD_NUMBER/ip_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T allocator-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb -ubds1984:d09c67e0bb9aca358e93c14f7cb3c56833f453f2 "https://api.bintray.com/content/bds1984/allocator/dz3allocator/$TRAVIS_BUILD_NUMBER/ip_filter-0.0.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
